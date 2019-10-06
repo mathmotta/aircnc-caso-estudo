@@ -1,11 +1,16 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const routes = require('./routes.js');
 
 const app = express();
 
-app.use(express.json());
-
-app.post('/users',(req, res) => {
-    return res.json(req.body);
+mongoose.connect('mongodb+srv://<username>:<password>@pers-aircnc-q6hoe.mongodb.net/casoestudo?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 });
+
+app.use(express.json());
+app.use(routes);
+
 
 app.listen(3333);

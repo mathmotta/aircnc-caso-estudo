@@ -6,6 +6,7 @@ Caso de estudo com uma app NodeJS, React e React Native
 
 __Yarn__ -> 
 __Express__ -> Framework dentro do node, ajuda na definição de rotas
-
+__MongoDB__ -> 
+__Multer__ ->
 
 
