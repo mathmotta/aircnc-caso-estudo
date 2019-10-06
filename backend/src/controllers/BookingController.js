@@ -1,6 +1,7 @@
 const Booking = require('../models/Booking');
 
 module.exports = {
+    // routes.post('/spots/:spot_id/bookings', BookingController.store);
     async store (req, res) {
         const { user_id } = req.headers;
         const { spot_id } = req.params;

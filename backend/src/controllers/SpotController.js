@@ -1,7 +1,13 @@
 const Spot = require('../models/Spot');
 const User = require('../models/User');
 
+
+
+
+
+
 module.exports = {
+    // routes.get('/spots', SpotController.index);
     async index(req, res){
         const { tech } = req.query;
 
@@ -10,6 +16,8 @@ module.exports = {
         return res.json(spots);
     },
 
+    //routes.post('/spots', upload.single('thumbnail'), SpotController.store);
+    
     async store(req, res){
         const { filename } = req.file;
         const { company, techs, price } = req.body;
