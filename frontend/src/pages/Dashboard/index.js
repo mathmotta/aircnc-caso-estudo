@@ -12,7 +12,7 @@ export default function Dashboard(){
 
 
     const user_id = localStorage.getItem('user');
-    const socket = useMemo(() => socketio('http://localhost:3333', {
+    const socket = useMemo(() => socketio('http://192.168.1.69:3333', {
         query: {user_id},
     }), [user_id]);
 
@@ -51,7 +51,7 @@ export default function Dashboard(){
     return (
         <>
             <ul className="notifications">
-                {requests.map(requests => (
+                {requests.map(request => (
                     <li key={request._id}>
                         <p>
                             <strong>{request.user.email}</strong> está solicitando uma reserva em <strong>{request.spot.company}</strong> para a data <strong>{request.date}</strong>
